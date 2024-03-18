@@ -39,7 +39,7 @@ npm run test
 npm run deploy
 ```
 
-
+create account
 ```bash
 npm i -g cargo-near
 cargo-near near create-dev-account use-random-account-id autogenerate-new-keypair save-to-legacy-keychain network-config testnet create
