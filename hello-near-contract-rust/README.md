@@ -102,10 +102,3 @@ near call fine-border.testnet set_greeting '{"greeting":"howdy"}' --accountId fi
 ```
 
 **Tip:** If you would like to call `set_greeting` using your own account, first login into NEAR using:
-
-```bash
-# Use near-cli to login your NEAR account
-near login
-```
-
-and then use the logged account to sign the transaction: `--accountId <your-account>`.
