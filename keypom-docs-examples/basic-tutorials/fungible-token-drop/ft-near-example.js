@@ -15,9 +15,12 @@ async function ftDropNear() {
 	const CREDENTIALS_DIR = ".near-credentials";
 	const credentialsPath = path.join(homedir, CREDENTIALS_DIR);
 	// const YOUR_ACCOUNT = "keypom-docs-demo.testnet";
-	const YOUR_ACCOUNT = "fine-border.testnet";
-	const FT_CONTRACT = "ft.keypom.testnet";
+	// const YOUR_ACCOUNT = "fine-border.testnet";
+	const YOUR_ACCOUNT = "transfer.won999.testnet";
+	// const FT_CONTRACT = "ft.keypom.testnet";
+	const FT_CONTRACT = "transfer.won999.testnet";
 	const KEYPOM_CONTRACT = "v2.keypom.testnet";
+
 
 	let keyStore = new UnencryptedFileSystemKeyStore(credentialsPath);
 
@@ -42,6 +45,8 @@ async function ftDropNear() {
 			account_id: YOUR_ACCOUNT
 		}
 	});
+
+	console.log('Funder Fungible Token Balance: ', funderFungibleTokenBal);
 
 	// Check if the owner has enough FT balance to fund drop
 	if (new BN(funderFungibleTokenBal).lte(new BN(amountToTransfer))) {
